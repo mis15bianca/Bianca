@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV - Bianca</title>
+
+  <style>
+    /* Reset básico */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      /* FONDO */
+      background: url("./fondo.png") center/cover no-repeat fixed;
+
+      /* Centrado */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* Para que en pantallas altas no quede “apretado” */
+      padding: 24px 12px;
+    }
+
+    /* Contenedor general para mantener proporciones */
+    .wrap {
+      width: min(520px, 92vw);
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Tarjeta invisible (solo para dar “zona segura” si hace falta) */
+    .card {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* En móvil, evitamos fixed para que iOS no haga cosas raras */
+    @media (max-width: 900px) {
+      body { background-attachment: scroll; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <!-- No ponemos nada encima.
+           Porque tu diseño ya está completo dentro de fondo.png -->
+    </div>
+  </div>
+</body>
+</html>
